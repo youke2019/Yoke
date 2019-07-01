@@ -13,13 +13,13 @@ In Iteration 1.
 > git submodule update
 
 ## WorkFlow
-1.Clone Code 
-2.Open New Branch
-3.Code Review
-4.Code
-5.update master and merge
-6.fix conflict, step 5 again.
-7.test and push
+1. Clone Code 
+2. Open New Branch
+3. Code Review
+4. Code
+5. update master and merge
+6. fix conflict, step 5 again.
+7. test and push
 
 
 
