@@ -3,6 +3,7 @@
 In Iteration 1.  
 
 # For Developers
+only push to this repo, when all modules agrees
 ## To Clone 
 > git clone https://github.com/youke2019/Yoke.git
 
