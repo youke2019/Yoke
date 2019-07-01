@@ -6,6 +6,8 @@ In Iteration 1.
 ## To Clone 
 > git clone https://github.com/youke2019/Yoke.git
 
+> cd Yoke
+
 > git submodule init
 
 > git submodule update
