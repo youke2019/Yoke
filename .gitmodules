@@ -1,0 +1,6 @@
+[submodule "Code/backend"]
+	path = Code/backend
+	url = https://github.com/youke2019/Backend.git
+[submodule "Code/frontend"]
+	path = Code/frontend
+	url = https://github.com/youke2019/Frontend.git
