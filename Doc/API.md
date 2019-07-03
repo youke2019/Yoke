@@ -2,6 +2,8 @@
 
 ### HTTPS
 ** fell free to change if you're implementing corresponding work **
+** some detail API is described in kanCloud API docs" **
+** link: https://www.kancloud.cn/zhaoxuyang13/yoke/1148255 **
 1. "/course"
     * value = "/" Method = GET, parameter = courseID 
     * value = "/" Method = POST, content = search Data
