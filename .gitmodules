@@ -7,3 +7,6 @@
 [submodule "Code/DB"]
 	path = Code/DB
 	url = https://github.com/youke2019/DB.git
+[submodule ".\\Code\\webFrontend"]
+	path = .\\Code\\webFrontend
+	url = https://github.com/youke2019/webFrontend.git
