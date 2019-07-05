@@ -1,9 +1,17 @@
 # Backend-API
 
 ### HTTPS
+we now use apidoc to generate API documents.
+doc of API doc http://apidocjs.com/
+write doc using Javadoc in java codes and use 
+> apidoc -i Code\backend\ -o Doc\apidoc 
+
+to update existing apidoc
+
 ** fell free to change if you're implementing corresponding work **
 ** some detail API is described in kanCloud API docs" **
 ** link: https://www.kancloud.cn/zhaoxuyang13/yoke/1148255 **
+
 1. "/course"
     * value = "/" Method = GET, parameter = courseID 
     * value = "/" Method = POST, content = search Data
