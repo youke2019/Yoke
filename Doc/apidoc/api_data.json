@@ -16,7 +16,40 @@
         },
         {
           "title": "Response-Example:",
-          "content": "[\n    {\n        \"course_id\": \"SE101\",\n        \"course_name\": \"计算机系统基础（1）\",\n        \"course_hours\": 80,\n        \"course_credits\": 5,\n        \"general\": false,\n        \"general_type\": \"\",\n        \"classes\": [\n            {\n                \"classname\": \"2018-2019-1-SE101-392689\",\n                \"course_id\": \"SE101\",\n                \"teacher_id\": \"11145\",\n                \"teacher_name\": \"臧斌宇\",\n                \"teachers\": \"11145/臧斌宇/教授[电子信息与电气工程学院];10886/陈榕/副教授[电子信息与电气工程学院]\",\n                \"course_participants\": 48,\n                \"classSegments\": [\n                    {\n                        \"class_sec_id\": 9250,\n                        \"classname\": \"2018-2019-1-SE101-392689\",\n                        \"classroom\": \"东上院102\",\n                        \"begin_week\": 1,\n                        \"end_week\": 16,\n                        \"begin_sec\": 7,\n                        \"end_sec\": 8,\n                        \"week\": 2,\n                        \"oddOrEven\": \"b\"\n                    },\n                    {\n                        \"class_sec_id\": 9251,\n                        \"classname\": \"2018-2019-1-SE101-392689\",\n                        \"classroom\": \"东上院102\",\n                        \"begin_week\": 1,\n                        \"end_week\": 16,\n                        \"begin_sec\": 7,\n                        \"end_sec\": 8,\n                        \"week\": 2,\n                        \"oddOrEven\": \"b\"\n                    },\n                    {\n                        \"class_sec_id\": 9252,\n                        \"classname\": \"2018-2019-1-SE101-392689\",\n                        \"classroom\": \"东上院102\",\n                        \"begin_week\": 1,\n                        \"end_week\": 16,\n                        \"begin_sec\": 3,\n                        \"end_sec\": 4,\n                        \"week\": 5,\n                        \"oddOrEven\": \"b\"\n                    },\n                    {\n                        \"class_sec_id\": 9253,\n                        \"classname\": \"2018-2019-1-SE101-392689\",\n                        \"classroom\": \"东上院102\",\n                        \"begin_week\": 1,\n                        \"end_week\": 16,\n                        \"begin_sec\": 3,\n                        \"end_sec\": 4,\n                        \"week\": 5,\n                        \"oddOrEven\": \"b\"\n                    }\n                ]\n            }\n        ]\n    }\n]",
+          "content": "[\n    {\n        \"course_id\": \"SE101\",\n        \"course_name\": \"计算机系统基础（1）\",\n        \"course_hours\": 80,\n        \"course_credits\": 5,\n        \"general\": false,\n        \"general_type\": \"\"\n    }\n]",
+          "type": "json"
+        }
+      ]
+    },
+    "filename": "backend/src/main/java/com/yoke/backend/Controller/CourseController.java",
+    "groupTitle": "courses"
+  },
+  {
+    "type": "get",
+    "url": "/courses/specific",
+    "title": "",
+    "description": "<p>获取课程的具体信息</p>",
+    "name": "SpecificCourseInfo",
+    "group": "courses",
+    "version": "1.0.0",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "course_id",
+            "description": ""
+          }
+        ]
+      }
+    },
+    "header": {
+      "examples": [
+        {
+          "title": "Response-Example:",
+          "content": "{\n    \"course_id\": \"SE101\",\n    \"course_name\": \"计算机系统基础（1）\",\n    \"course_hours\": 80,\n    \"course_credits\": 5,\n    \"general\": false,\n    \"general_type\": \"\",\n    \"classes\": [\n        {\n            \"classname\": \"2018-2019-1-SE101-392689\",\n            \"course_id\": \"SE101\",\n            \"teacher_id\": \"11145\",\n            \"teacher_name\": \"臧斌宇\",\n            \"teachers\": \"11145/臧斌宇/教授[电子信息与电气工程学院];10886/陈榕/副教授[电子信息与电气工程学院]\",\n            \"course_participants\": 48,\n            \"classSegments\": [\n                {\n                    \"class_sec_id\": 9250,\n                    \"classname\": \"2018-2019-1-SE101-392689\",\n                    \"classroom\": \"东上院102\",\n                    \"begin_week\": 1,\n                    \"end_week\": 16,\n                    \"begin_sec\": 7,\n                    \"end_sec\": 8,\n                    \"week\": 2,\n                    \"oddOrEven\": \"b\"\n                },\n                {\n                    \"class_sec_id\": 9251,\n                    \"classname\": \"2018-2019-1-SE101-392689\",\n                    \"classroom\": \"东上院102\",\n                    \"begin_week\": 1,\n                    \"end_week\": 16,\n                    \"begin_sec\": 7,\n                    \"end_sec\": 8,\n                    \"week\": 2,\n                    \"oddOrEven\": \"b\"\n                },\n                {\n                    \"class_sec_id\": 9252,\n                    \"classname\": \"2018-2019-1-SE101-392689\",\n                    \"classroom\": \"东上院102\",\n                    \"begin_week\": 1,\n                    \"end_week\": 16,\n                    \"begin_sec\": 3,\n                    \"end_sec\": 4,\n                    \"week\": 5,\n                    \"oddOrEven\": \"b\"\n                },\n                {\n                    \"class_sec_id\": 9253,\n                    \"classname\": \"2018-2019-1-SE101-392689\",\n                    \"classroom\": \"东上院102\",\n                    \"begin_week\": 1,\n                    \"end_week\": 16,\n                    \"begin_sec\": 3,\n                    \"end_sec\": 4,\n                    \"week\": 5,\n                    \"oddOrEven\": \"b\"\n                }\n            ]\n        }\n    ]\n}",
           "type": "json"
         }
       ]
