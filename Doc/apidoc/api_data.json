@@ -38,6 +38,30 @@
     "groupTitle": "CourseMessage"
   },
   {
+    "type": "post",
+    "url": "/course/questions/add",
+    "title": "",
+    "name": "addQuestion",
+    "group": "CourseMessage",
+    "sampleRequest": [
+      {
+        "url": ": http://localhost:8080/courses/questions/find?course_id=83374&user_id=02690"
+      }
+    ],
+    "success": {
+      "examples": [
+        {
+          "title": "Request-Example:",
+          "content": "{\n\t\"course_id\":\"01190\",\n\t\"user_id\":\"02690\",\n\t\"question_content\":\"上课有趣吗\"\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "backend/src/main/java/com/yoke/backend/Controller/CourseQuestionController.java",
+    "groupTitle": "CourseMessage"
+  },
+  {
     "type": "get",
     "url": "/course/evaluates/find",
     "title": "",
