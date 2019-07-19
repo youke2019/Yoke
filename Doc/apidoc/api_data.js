@@ -1,14 +1,45 @@
 define({ "api": [
   {
     "type": "post",
-    "url": "/course/comments/add:",
+    "url": "/courses/answers/add",
     "title": "",
-    "name": "addComment",
+    "description": "<p>添加回答</p>",
+    "name": "addAnswer",
     "group": "CourseMessage",
+    "sampleRequest": [
+      {
+        "url": "47.103.30.166:8000/courses/answers/add"
+      }
+    ],
     "success": {
       "examples": [
         {
-          "title": "Request-Example:",
+          "title": "Post-Example:",
+          "content": "{\n\t\"question_id\":3,\n\t\"user_id\":\"01231\",\n\t\"answer_content\":\"这是一个好问题\"\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "backend/src/main/java/com/yoke/backend/Controller/CourseQuestionController.java",
+    "groupTitle": "CourseMessage"
+  },
+  {
+    "type": "post",
+    "url": "/course/comments/add:",
+    "title": "",
+    "name": "addComment",
+    "description": "<p>添加评论</p>",
+    "group": "CourseMessage",
+    "sampleRequest": [
+      {
+        "url": "47.103.30.166:8000/courses/comments/add"
+      }
+    ],
+    "success": {
+      "examples": [
+        {
+          "title": "Post-Example:",
           "content": "    {\n\t\"course_id\":\"SE101\",\n\t\"user_id\":84514,\n\t\"course_comment_content\":\"ics是交大的镇校神课\"\n}",
           "type": "json"
         }
@@ -23,7 +54,13 @@ define({ "api": [
     "url": "/course/evaluates/add:",
     "title": "",
     "name": "addEvaluation",
+    "description": "<p>添加评测</p>",
     "group": "CourseMessage",
+    "sampleRequest": [
+      {
+        "url": "/course/evaluates/add"
+      }
+    ],
     "success": {
       "examples": [
         {
@@ -38,21 +75,158 @@ define({ "api": [
     "groupTitle": "CourseMessage"
   },
   {
+    "type": "post",
+    "url": "/courses/questions/add",
+    "title": "",
+    "description": "<p>添加提问</p>",
+    "name": "addQuestion",
+    "group": "CourseMessage",
+    "sampleRequest": [
+      {
+        "url": "47.103.30.166:8000/courses/questions/add"
+      }
+    ],
+    "success": {
+      "examples": [
+        {
+          "title": "Request-Example:",
+          "content": "{\n\t\"course_id\":\"01190\",\n\t\"user_id\":\"02690\",\n\t\"question_content\":\"上课有趣吗\"\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "backend/src/main/java/com/yoke/backend/Controller/CourseQuestionController.java",
+    "groupTitle": "CourseMessage"
+  },
+  {
+    "type": "get",
+    "url": "/courses/comments/ban:",
+    "title": "",
+    "description": "<p>封禁评论</p>",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "Interger",
+            "optional": false,
+            "field": "comment_id",
+            "description": ""
+          }
+        ]
+      }
+    },
+    "name": "banComment",
+    "group": "CourseMessage",
+    "sampleRequest": [
+      {
+        "url": "47.103.30.166:8000/courses/comments/ban?comment_id=2"
+      }
+    ],
+    "version": "0.0.0",
+    "filename": "backend/src/main/java/com/yoke/backend/Controller/CourseCommentController.java",
+    "groupTitle": "CourseMessage"
+  },
+  {
+    "type": "get",
+    "url": "/courses/comments/delete:",
+    "title": "",
+    "description": "<p>删除评论</p>",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "Interger",
+            "optional": false,
+            "field": "user_id",
+            "description": ""
+          }
+        ]
+      }
+    },
+    "name": "deleteComment",
+    "group": "CourseMessage",
+    "sampleRequest": [
+      {
+        "url": "47.103.30.166:8000/courses/comments/delete?comment_id=3"
+      }
+    ],
+    "version": "0.0.0",
+    "filename": "backend/src/main/java/com/yoke/backend/Controller/CourseCommentController.java",
+    "groupTitle": "CourseMessage"
+  },
+  {
     "type": "get",
     "url": "/course/evaluates/find",
     "title": "",
     "name": "findEvaluation",
+    "description": "<p>获取课程评测</p>",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "course_id",
+            "description": ""
+          }
+        ]
+      }
+    },
     "group": "CourseMessage",
+    "sampleRequest": [
+      {
+        "url": "/course/evaluates/find?course_id=SE101"
+      }
+    ],
+    "success": {
+      "examples": [
+        {
+          "title": "Request-Example:",
+          "content": "[\n    {\n        \"course_id\": \"11004\",\n        \"user_id\": \"01231\",\n        \"credit_point\": 90.0,\n        \"考核方式\": \"论文\",\n        \"点名\": \"每节课都点名\"\n    },\n    {\n        \"course_id\": \"11004\",\n        \"user_id\": \"42257\",\n        \"credit_point\": 90.0,\n        \"考核方式\": \"论文\",\n        \"点名\": \"每节课都点名\",\n        \"给分\": \"给分很低\"\n    }\n]",
+          "type": "json"
+        }
+      ]
+    },
     "version": "0.0.0",
     "filename": "backend/src/main/java/com/yoke/backend/Controller/CourseEvaluateController.java",
     "groupTitle": "CourseMessage"
   },
   {
     "type": "get",
-    "url": "/course/questions/find",
+    "url": "/courses/questions/find",
     "title": "",
+    "description": "<p>查找课程提问</p>",
     "name": "findQuestion",
     "group": "CourseMessage",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "course_id",
+            "description": ""
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "user_id",
+            "description": ""
+          }
+        ]
+      }
+    },
+    "sampleRequest": [
+      {
+        "url": "47.103.30.166:8000/courses/questions/find?course_id=66974&user_id=01231"
+      }
+    ],
     "success": {
       "examples": [
         {
@@ -68,10 +242,29 @@ define({ "api": [
   },
   {
     "type": "get",
-    "url": "/course/comments/find:",
+    "url": "/courses/comments/find:",
     "title": "",
     "name": "getcomment",
+    "description": "<p>获得课程评论</p>",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "course_id",
+            "description": ""
+          }
+        ]
+      }
+    },
     "group": "CourseMessage",
+    "sampleRequest": [
+      {
+        "url": "47.103.30.166:8000/courses/comments/find?course_id=41899"
+      }
+    ],
     "success": {
       "examples": [
         {
@@ -87,32 +280,247 @@ define({ "api": [
   },
   {
     "type": "get",
+    "url": "/courses/answers/praise",
+    "title": "",
+    "description": "<p>点赞回答</p>",
+    "name": "praiseAnswers",
+    "group": "CourseMessage",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "Integer",
+            "optional": false,
+            "field": "answer_id",
+            "description": ""
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "user_id",
+            "description": ""
+          }
+        ]
+      }
+    },
+    "sampleRequest": [
+      {
+        "url": "47.103.30.166:8000/courses/answers/praise?answer_id=3&user_id=01231"
+      }
+    ],
+    "version": "0.0.0",
+    "filename": "backend/src/main/java/com/yoke/backend/Controller/CourseQuestionController.java",
+    "groupTitle": "CourseMessage"
+  },
+  {
+    "type": "get",
     "url": "/course/comments/praise:",
     "title": "",
+    "description": "<p>点赞评论</p>",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "user_id",
+            "description": ""
+          },
+          {
+            "group": "Parameter",
+            "type": "Interger",
+            "optional": false,
+            "field": "course_comment_id",
+            "description": ""
+          }
+        ]
+      }
+    },
     "name": "praiseComment",
     "group": "CourseMessage",
+    "sampleRequest": [
+      {
+        "url": "example: /course/comments/praise?user_id=1&course_comment_id=2"
+      }
+    ],
     "version": "0.0.0",
     "filename": "backend/src/main/java/com/yoke/backend/Controller/CourseCommentController.java",
     "groupTitle": "CourseMessage"
   },
   {
     "type": "get",
-    "url": "/course/comments/unpraise:",
+    "url": "/courses/questions/praise",
     "title": "",
+    "description": "<p>对问题点赞</p>",
+    "name": "praiseQuestion",
+    "group": "CourseMessage",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "Integer",
+            "optional": false,
+            "field": "question_id",
+            "description": ""
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "user_id",
+            "description": ""
+          }
+        ]
+      }
+    },
+    "sampleRequest": [
+      {
+        "url": "47.103.30.166:8000/courses/questions/praise?question_id=3&user_id=01231"
+      }
+    ],
+    "version": "0.0.0",
+    "filename": "backend/src/main/java/com/yoke/backend/Controller/CourseQuestionController.java",
+    "groupTitle": "CourseMessage"
+  },
+  {
+    "type": "get",
+    "url": "/courses/comments/unban:",
+    "title": "",
+    "description": "<p>解禁评论</p>",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "Interger",
+            "optional": false,
+            "field": "comment_id",
+            "description": ""
+          }
+        ]
+      }
+    },
+    "name": "unbanComment",
+    "group": "CourseMessage",
+    "sampleRequest": [
+      {
+        "url": "47.103.30.166:8000/courses/comments/unban?comment_id=2"
+      }
+    ],
+    "version": "0.0.0",
+    "filename": "backend/src/main/java/com/yoke/backend/Controller/CourseCommentController.java",
+    "groupTitle": "CourseMessage"
+  },
+  {
+    "type": "get",
+    "url": "/courses/answers/unpraise",
+    "title": "",
+    "description": "<p>取消回答点赞</p>",
+    "name": "unpraiseAnswers",
+    "group": "CourseMessage",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "Integer",
+            "optional": false,
+            "field": "answer_id",
+            "description": ""
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "user_id",
+            "description": ""
+          }
+        ]
+      }
+    },
+    "sampleRequest": [
+      {
+        "url": "47.103.30.166:8000/courses/answers/unpraise?answer_id=3&user_id=01231"
+      }
+    ],
+    "version": "0.0.0",
+    "filename": "backend/src/main/java/com/yoke/backend/Controller/CourseQuestionController.java",
+    "groupTitle": "CourseMessage"
+  },
+  {
+    "type": "get",
+    "url": "/courses/comments/unpraise:",
+    "title": "",
+    "description": "<p>取消点赞评论</p>",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "user_id",
+            "description": ""
+          },
+          {
+            "group": "Parameter",
+            "type": "Interger",
+            "optional": false,
+            "field": "course_comment_id",
+            "description": ""
+          }
+        ]
+      }
+    },
     "name": "unpraiseComment",
     "group": "CourseMessage",
+    "sampleRequest": [
+      {
+        "url": "example: /course/comments/unpraise?user_id=1&course_comment_id=2"
+      }
+    ],
     "version": "0.0.0",
     "filename": "backend/src/main/java/com/yoke/backend/Controller/CourseCommentController.java",
     "groupTitle": "CourseMessage"
   },
   {
     "type": "get",
-    "url": "/course/comments/delete:",
+    "url": "/courses/questions/unpraise",
     "title": "",
-    "name": "withdrawComment",
+    "description": "<p>取消问题点赞</p>",
+    "name": "unpraiseQuestion",
     "group": "CourseMessage",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "Integer",
+            "optional": false,
+            "field": "question_id",
+            "description": ""
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "user_id",
+            "description": ""
+          }
+        ]
+      }
+    },
+    "sampleRequest": [
+      {
+        "url": "47.103.30.166:8000/courses/questions/unpraise?question_id=3&user_id=01231"
+      }
+    ],
     "version": "0.0.0",
-    "filename": "backend/src/main/java/com/yoke/backend/Controller/CourseCommentController.java",
+    "filename": "backend/src/main/java/com/yoke/backend/Controller/CourseQuestionController.java",
     "groupTitle": "CourseMessage"
   },
   {
