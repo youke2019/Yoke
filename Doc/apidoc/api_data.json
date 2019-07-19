@@ -21,7 +21,7 @@
       ]
     },
     "version": "0.0.0",
-    "filename": "backend/src/main/java/com/yoke/backend/Controller/CourseQuestionController.java",
+    "filename": "backend/src/main/java/com/yoke/backend/Controller/Course/CourseMessage/CourseQuestionController.java",
     "groupTitle": "CourseMessage"
   },
   {
@@ -46,7 +46,7 @@
       ]
     },
     "version": "0.0.0",
-    "filename": "backend/src/main/java/com/yoke/backend/Controller/CourseCommentController.java",
+    "filename": "backend/src/main/java/com/yoke/backend/Controller/Course/CourseMessage/CourseCommentController.java",
     "groupTitle": "CourseMessage"
   },
   {
@@ -71,7 +71,7 @@
       ]
     },
     "version": "0.0.0",
-    "filename": "backend/src/main/java/com/yoke/backend/Controller/CourseEvaluateController.java",
+    "filename": "backend/src/main/java/com/yoke/backend/Controller/Course/CourseMessage/CourseEvaluateController.java",
     "groupTitle": "CourseMessage"
   },
   {
@@ -96,7 +96,7 @@
       ]
     },
     "version": "0.0.0",
-    "filename": "backend/src/main/java/com/yoke/backend/Controller/CourseQuestionController.java",
+    "filename": "backend/src/main/java/com/yoke/backend/Controller/Course/CourseMessage/CourseQuestionController.java",
     "groupTitle": "CourseMessage"
   },
   {
@@ -125,7 +125,7 @@
       }
     ],
     "version": "0.0.0",
-    "filename": "backend/src/main/java/com/yoke/backend/Controller/CourseCommentController.java",
+    "filename": "backend/src/main/java/com/yoke/backend/Controller/Course/CourseMessage/CourseCommentController.java",
     "groupTitle": "CourseMessage"
   },
   {
@@ -154,7 +154,31 @@
       }
     ],
     "version": "0.0.0",
-    "filename": "backend/src/main/java/com/yoke/backend/Controller/CourseCommentController.java",
+    "filename": "backend/src/main/java/com/yoke/backend/Controller/Course/CourseMessage/CourseCommentController.java",
+    "groupTitle": "CourseMessage"
+  },
+  {
+    "type": "get",
+    "url": "/courses/moments/findAll",
+    "title": "",
+    "name": "findCourseMoment",
+    "description": "<p>查找所有精彩瞬间</p>",
+    "group": "CourseMessage",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "user_id",
+            "description": ""
+          }
+        ]
+      }
+    },
+    "version": "0.0.0",
+    "filename": "backend/src/main/java/com/yoke/backend/Controller/Course/CourseMessage/CourseGreatMomentController.java",
     "groupTitle": "CourseMessage"
   },
   {
@@ -192,7 +216,7 @@
       ]
     },
     "version": "0.0.0",
-    "filename": "backend/src/main/java/com/yoke/backend/Controller/CourseEvaluateController.java",
+    "filename": "backend/src/main/java/com/yoke/backend/Controller/Course/CourseMessage/CourseEvaluateController.java",
     "groupTitle": "CourseMessage"
   },
   {
@@ -237,7 +261,7 @@
       ]
     },
     "version": "0.0.0",
-    "filename": "backend/src/main/java/com/yoke/backend/Controller/CourseQuestionController.java",
+    "filename": "backend/src/main/java/com/yoke/backend/Controller/Course/CourseMessage/CourseQuestionController.java",
     "groupTitle": "CourseMessage"
   },
   {
@@ -254,6 +278,13 @@
             "type": "String",
             "optional": false,
             "field": "course_id",
+            "description": ""
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "user_id",
             "description": ""
           }
         ]
@@ -275,7 +306,7 @@
       ]
     },
     "version": "0.0.0",
-    "filename": "backend/src/main/java/com/yoke/backend/Controller/CourseCommentController.java",
+    "filename": "backend/src/main/java/com/yoke/backend/Controller/Course/CourseMessage/CourseCommentController.java",
     "groupTitle": "CourseMessage"
   },
   {
@@ -311,7 +342,7 @@
       }
     ],
     "version": "0.0.0",
-    "filename": "backend/src/main/java/com/yoke/backend/Controller/CourseQuestionController.java",
+    "filename": "backend/src/main/java/com/yoke/backend/Controller/Course/CourseMessage/CourseQuestionController.java",
     "groupTitle": "CourseMessage"
   },
   {
@@ -347,7 +378,7 @@
       }
     ],
     "version": "0.0.0",
-    "filename": "backend/src/main/java/com/yoke/backend/Controller/CourseCommentController.java",
+    "filename": "backend/src/main/java/com/yoke/backend/Controller/Course/CourseMessage/CourseCommentController.java",
     "groupTitle": "CourseMessage"
   },
   {
@@ -383,7 +414,7 @@
       }
     ],
     "version": "0.0.0",
-    "filename": "backend/src/main/java/com/yoke/backend/Controller/CourseQuestionController.java",
+    "filename": "backend/src/main/java/com/yoke/backend/Controller/Course/CourseMessage/CourseQuestionController.java",
     "groupTitle": "CourseMessage"
   },
   {
@@ -412,7 +443,7 @@
       }
     ],
     "version": "0.0.0",
-    "filename": "backend/src/main/java/com/yoke/backend/Controller/CourseCommentController.java",
+    "filename": "backend/src/main/java/com/yoke/backend/Controller/Course/CourseMessage/CourseCommentController.java",
     "groupTitle": "CourseMessage"
   },
   {
@@ -448,7 +479,7 @@
       }
     ],
     "version": "0.0.0",
-    "filename": "backend/src/main/java/com/yoke/backend/Controller/CourseQuestionController.java",
+    "filename": "backend/src/main/java/com/yoke/backend/Controller/Course/CourseMessage/CourseQuestionController.java",
     "groupTitle": "CourseMessage"
   },
   {
@@ -484,7 +515,7 @@
       }
     ],
     "version": "0.0.0",
-    "filename": "backend/src/main/java/com/yoke/backend/Controller/CourseCommentController.java",
+    "filename": "backend/src/main/java/com/yoke/backend/Controller/Course/CourseMessage/CourseCommentController.java",
     "groupTitle": "CourseMessage"
   },
   {
@@ -520,8 +551,48 @@
       }
     ],
     "version": "0.0.0",
-    "filename": "backend/src/main/java/com/yoke/backend/Controller/CourseQuestionController.java",
+    "filename": "backend/src/main/java/com/yoke/backend/Controller/Course/CourseMessage/CourseQuestionController.java",
     "groupTitle": "CourseMessage"
+  },
+  {
+    "type": "post",
+    "url": "courses/moments/post",
+    "title": "",
+    "name": "postCourseMoment",
+    "description": "<p>发布课程精彩瞬间</p>",
+    "group": "CoursesMessage",
+    "success": {
+      "examples": [
+        {
+          "title": "Post-Example:",
+          "content": "{\n\t\"user_id\":\"01231\",\n\t\"post_text\":\"我这门课是木课，嘻嘻\",\n\t\"video_type\":\"i\",   //i:图片，v:视频，n:无\n\t\"image_url\":\"ipads.sjtu.edu.cn/se101\"\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "backend/src/main/java/com/yoke/backend/Controller/Course/CourseMessage/CourseGreatMomentController.java",
+    "groupTitle": "CoursesMessage"
+  },
+  {
+    "type": "post",
+    "url": "/courses/moments/comment",
+    "title": "",
+    "name": "commentCourseMoment",
+    "description": "<p>评论课程精彩瞬间</p>",
+    "success": {
+      "examples": [
+        {
+          "title": "Post-Example:",
+          "content": "{\n\t\"video_id\":5,\n\t\"user_id\":\"01231\",\n\t\"video_comment_content\":\"有趣\"\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "backend/src/main/java/com/yoke/backend/Controller/Course/CourseMessage/CourseGreatMomentController.java",
+    "group": "G__c2019summer_software_backend_src_main_java_com_yoke_backend_Controller_Course_CourseMessage_CourseGreatMomentController_java",
+    "groupTitle": "G__c2019summer_software_backend_src_main_java_com_yoke_backend_Controller_Course_CourseMessage_CourseGreatMomentController_java"
   },
   {
     "type": "post",
@@ -545,7 +616,7 @@
         }
       ]
     },
-    "filename": "backend/src/main/java/com/yoke/backend/Controller/CourseController.java",
+    "filename": "backend/src/main/java/com/yoke/backend/Controller/Course/CourseController.java",
     "groupTitle": "courses"
   },
   {
@@ -578,8 +649,70 @@
         }
       ]
     },
-    "filename": "backend/src/main/java/com/yoke/backend/Controller/CourseController.java",
+    "filename": "backend/src/main/java/com/yoke/backend/Controller/Course/CourseController.java",
     "groupTitle": "courses"
+  },
+  {
+    "type": "get",
+    "url": "/courses/moments/praise",
+    "title": "",
+    "name": "praiseCourseMoment",
+    "description": "<p>对课程精彩瞬间进行点赞</p>",
+    "group": "courses_message",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "Integer",
+            "optional": false,
+            "field": "video_id",
+            "description": ""
+          },
+          {
+            "group": "Parameter",
+            "type": "Integer",
+            "optional": false,
+            "field": "user_id",
+            "description": ""
+          }
+        ]
+      }
+    },
+    "version": "0.0.0",
+    "filename": "backend/src/main/java/com/yoke/backend/Controller/Course/CourseMessage/CourseGreatMomentController.java",
+    "groupTitle": "courses_message"
+  },
+  {
+    "type": "get",
+    "url": "/courses/moments/unpraise",
+    "title": "",
+    "name": "unpraiseCourseMoment",
+    "description": "<p>对课程精彩瞬间取消点赞</p>",
+    "group": "courses_message",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "Integer",
+            "optional": false,
+            "field": "video_id",
+            "description": ""
+          },
+          {
+            "group": "Parameter",
+            "type": "Integer",
+            "optional": false,
+            "field": "user_id",
+            "description": ""
+          }
+        ]
+      }
+    },
+    "version": "0.0.0",
+    "filename": "backend/src/main/java/com/yoke/backend/Controller/Course/CourseMessage/CourseGreatMomentController.java",
+    "groupTitle": "courses_message"
   },
   {
     "type": "get",
@@ -609,7 +742,7 @@
         ]
       }
     },
-    "filename": "backend/src/main/java/com/yoke/backend/Controller/CourseController.java",
+    "filename": "backend/src/main/java/com/yoke/backend/Controller/Course/CourseController.java",
     "groupTitle": "courses"
   },
   {
