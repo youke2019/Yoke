@@ -129,6 +129,25 @@
     "groupTitle": "CourseMessage"
   },
   {
+    "name": "commentCourseMoment",
+    "group": "CourseMessage",
+    "description": "<p>评论课程精彩瞬间</p>",
+    "success": {
+      "examples": [
+        {
+          "title": "Post-Example:",
+          "content": "{\n\"video_id\":5,\n\"user_id\":\"01231\",\n\"video_comment_content\":\"有趣\"\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "type": "",
+    "url": "",
+    "version": "0.0.0",
+    "filename": "backend/src/main/java/com/yoke/backend/Controller/Course/CourseMessage/CourseGreatMomentController.java",
+    "groupTitle": "CourseMessage"
+  },
+  {
     "type": "get",
     "url": "/courses/comments/delete:",
     "title": "",
@@ -158,9 +177,6 @@
     "groupTitle": "CourseMessage"
   },
   {
-    "type": "get",
-    "url": "/courses/moments/findAll",
-    "title": "",
     "name": "findCourseMoment",
     "description": "<p>查找所有精彩瞬间</p>",
     "group": "CourseMessage",
@@ -177,6 +193,8 @@
         ]
       }
     },
+    "type": "",
+    "url": "",
     "version": "0.0.0",
     "filename": "backend/src/main/java/com/yoke/backend/Controller/Course/CourseMessage/CourseGreatMomentController.java",
     "groupTitle": "CourseMessage"
@@ -266,6 +284,29 @@
   },
   {
     "type": "get",
+    "url": "images/",
+    "title": "",
+    "name": "getFile",
+    "description": "<p>获取图片或者视频文件</p>",
+    "group": "CourseMessage",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "optional": false,
+            "field": "http://47.103.30.166:8000/images/e88affabfdb142d2b70e13bf9ea086d7.mp4",
+            "description": ""
+          }
+        ]
+      }
+    },
+    "version": "0.0.0",
+    "filename": "backend/src/main/java/com/yoke/backend/Controller/Course/CourseMessage/CourseGreatMomentController.java",
+    "groupTitle": "CourseMessage"
+  },
+  {
+    "type": "get",
     "url": "/courses/comments/find:",
     "title": "",
     "name": "getcomment",
@@ -307,6 +348,26 @@
     },
     "version": "0.0.0",
     "filename": "backend/src/main/java/com/yoke/backend/Controller/Course/CourseMessage/CourseCommentController.java",
+    "groupTitle": "CourseMessage"
+  },
+  {
+    "type": "post",
+    "url": "courses/moments/post",
+    "title": "",
+    "name": "postCourseMoment",
+    "description": "<p>发布课程精彩瞬间</p>",
+    "group": "CourseMessage",
+    "success": {
+      "examples": [
+        {
+          "title": "Post-Example:",
+          "content": "{\n\"user_id\":\"01231\",\n\"post_text\":\"我这门课是木课，嘻嘻\",\n\"video_type\":\"i\",   //i:图片，v:视频，n:无\n\"image_url\":\"ipads.sjtu.edu.cn/se101\"\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "backend/src/main/java/com/yoke/backend/Controller/Course/CourseMessage/CourseGreatMomentController.java",
     "groupTitle": "CourseMessage"
   },
   {
@@ -556,43 +617,87 @@
   },
   {
     "type": "post",
-    "url": "courses/moments/post",
+    "url": "courses/moment/upload",
     "title": "",
-    "name": "postCourseMoment",
-    "description": "<p>发布课程精彩瞬间</p>",
-    "group": "CoursesMessage",
-    "success": {
-      "examples": [
-        {
-          "title": "Post-Example:",
-          "content": "{\n\t\"user_id\":\"01231\",\n\t\"post_text\":\"我这门课是木课，嘻嘻\",\n\t\"video_type\":\"i\",   //i:图片，v:视频，n:无\n\t\"image_url\":\"ipads.sjtu.edu.cn/se101\"\n}",
-          "type": "json"
-        }
-      ]
+    "name": "uploadFile",
+    "description": "<p>上传图片或者视频文件</p>",
+    "group": "CourseMessage",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "file",
+            "optional": false,
+            "field": "file",
+            "description": ""
+          }
+        ]
+      }
     },
     "version": "0.0.0",
     "filename": "backend/src/main/java/com/yoke/backend/Controller/Course/CourseMessage/CourseGreatMomentController.java",
-    "groupTitle": "CoursesMessage"
+    "groupTitle": "CourseMessage"
   },
   {
-    "type": "post",
-    "url": "/courses/moments/comment",
-    "title": "",
-    "name": "commentCourseMoment",
-    "description": "<p>评论课程精彩瞬间</p>",
-    "success": {
-      "examples": [
-        {
-          "title": "Post-Example:",
-          "content": "{\n\t\"video_id\":5,\n\t\"user_id\":\"01231\",\n\t\"video_comment_content\":\"有趣\"\n}",
-          "type": "json"
-        }
-      ]
+    "name": "praiseCourseMoment",
+    "description": "<p>对课程精彩瞬间进行点赞</p>",
+    "group": "Course_Message",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "Integer",
+            "optional": false,
+            "field": "video_id",
+            "description": ""
+          },
+          {
+            "group": "Parameter",
+            "type": "Integer",
+            "optional": false,
+            "field": "user_id",
+            "description": ""
+          }
+        ]
+      }
     },
+    "type": "",
+    "url": "",
     "version": "0.0.0",
     "filename": "backend/src/main/java/com/yoke/backend/Controller/Course/CourseMessage/CourseGreatMomentController.java",
-    "group": "G__c2019summer_software_backend_src_main_java_com_yoke_backend_Controller_Course_CourseMessage_CourseGreatMomentController_java",
-    "groupTitle": "G__c2019summer_software_backend_src_main_java_com_yoke_backend_Controller_Course_CourseMessage_CourseGreatMomentController_java"
+    "groupTitle": "Course_Message"
+  },
+  {
+    "name": "unpraiseCourseMoment",
+    "description": "<p>对课程精彩瞬间取消点赞</p>",
+    "group": "Course_Message",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "Integer",
+            "optional": false,
+            "field": "video_id",
+            "description": ""
+          },
+          {
+            "group": "Parameter",
+            "type": "Integer",
+            "optional": false,
+            "field": "user_id",
+            "description": ""
+          }
+        ]
+      }
+    },
+    "type": "",
+    "url": "",
+    "version": "0.0.0",
+    "filename": "backend/src/main/java/com/yoke/backend/Controller/Course/CourseMessage/CourseGreatMomentController.java",
+    "groupTitle": "Course_Message"
   },
   {
     "type": "post",
@@ -651,68 +756,6 @@
     },
     "filename": "backend/src/main/java/com/yoke/backend/Controller/Course/CourseController.java",
     "groupTitle": "courses"
-  },
-  {
-    "type": "get",
-    "url": "/courses/moments/praise",
-    "title": "",
-    "name": "praiseCourseMoment",
-    "description": "<p>对课程精彩瞬间进行点赞</p>",
-    "group": "courses_message",
-    "parameter": {
-      "fields": {
-        "Parameter": [
-          {
-            "group": "Parameter",
-            "type": "Integer",
-            "optional": false,
-            "field": "video_id",
-            "description": ""
-          },
-          {
-            "group": "Parameter",
-            "type": "Integer",
-            "optional": false,
-            "field": "user_id",
-            "description": ""
-          }
-        ]
-      }
-    },
-    "version": "0.0.0",
-    "filename": "backend/src/main/java/com/yoke/backend/Controller/Course/CourseMessage/CourseGreatMomentController.java",
-    "groupTitle": "courses_message"
-  },
-  {
-    "type": "get",
-    "url": "/courses/moments/unpraise",
-    "title": "",
-    "name": "unpraiseCourseMoment",
-    "description": "<p>对课程精彩瞬间取消点赞</p>",
-    "group": "courses_message",
-    "parameter": {
-      "fields": {
-        "Parameter": [
-          {
-            "group": "Parameter",
-            "type": "Integer",
-            "optional": false,
-            "field": "video_id",
-            "description": ""
-          },
-          {
-            "group": "Parameter",
-            "type": "Integer",
-            "optional": false,
-            "field": "user_id",
-            "description": ""
-          }
-        ]
-      }
-    },
-    "version": "0.0.0",
-    "filename": "backend/src/main/java/com/yoke/backend/Controller/Course/CourseMessage/CourseGreatMomentController.java",
-    "groupTitle": "courses_message"
   },
   {
     "type": "get",
