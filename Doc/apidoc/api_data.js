@@ -65,7 +65,7 @@ define({ "api": [
       "examples": [
         {
           "title": "Request-Example:",
-          "content": "    {\n\t\"course_id\":\"SE101\",\n\t\"user_id\":84514,\n\t\"点名\":\"偶尔点名\"\n}",
+          "content": "    {\n\t\"course_id\":\"SE101\",  //必填\n\t\"user_id\":\"01231\",   //必填\n\t\"evaluate_point\":5,\n\t\"给分情况\":\"给分高\"\n}",
           "type": "json"
         }
       ]
@@ -228,7 +228,7 @@ define({ "api": [
       "examples": [
         {
           "title": "Request-Example:",
-          "content": "[\n    {\n        \"course_id\": \"11004\",\n        \"user_id\": \"01231\",\n        \"credit_point\": 90.0,\n        \"考核方式\": \"论文\",\n        \"点名\": \"每节课都点名\"\n    },\n    {\n        \"course_id\": \"11004\",\n        \"user_id\": \"42257\",\n        \"credit_point\": 90.0,\n        \"考核方式\": \"论文\",\n        \"点名\": \"每节课都点名\",\n        \"给分\": \"给分很低\"\n    }\n]",
+          "content": "[{\n        \"evaluate_id\": 4,\n        \"evaluate_time\": \"2019-07-22 14:03:35\",\n        \"user_id\": \"01231\",\n        \"course_id\": \"SE101\",\n        \"evaluate_content\": {\n            \"course_id\": \"SE101\",\n            \"evaluate_id\": 4,\n            \"给分情况\": \"给分高\",\n            \"user_id\": \"01231\",\n            \"evaluate_point\": 5\n        },\n        \"evaluate_praise_point\": 0,\n        \"current_user_praise\": false,\n        \"courseEvaluationPraiseList\": []\n    }\n]",
           "type": "json"
         }
       ]
@@ -444,6 +444,37 @@ define({ "api": [
   },
   {
     "type": "get",
+    "url": "/courses/evaluates/praise",
+    "title": "",
+    "group": "CourseMessage",
+    "name": "praiseEvaluation",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "Interger",
+            "optional": false,
+            "field": "course_evaluate_id",
+            "description": ""
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "user_id",
+            "description": ""
+          }
+        ]
+      }
+    },
+    "description": "<p>点赞</p>",
+    "version": "0.0.0",
+    "filename": "backend/src/main/java/com/yoke/backend/Controller/Course/CourseMessage/CourseEvaluateController.java",
+    "groupTitle": "CourseMessage"
+  },
+  {
+    "type": "get",
     "url": "/courses/questions/praise",
     "title": "",
     "description": "<p>对问题点赞</p>",
@@ -577,6 +608,37 @@ define({ "api": [
     ],
     "version": "0.0.0",
     "filename": "backend/src/main/java/com/yoke/backend/Controller/Course/CourseMessage/CourseCommentController.java",
+    "groupTitle": "CourseMessage"
+  },
+  {
+    "type": "get",
+    "url": "/courses/evaluates/unpraise",
+    "title": "",
+    "group": "CourseMessage",
+    "name": "unpraiseEvaluation",
+    "description": "<p>取消点赞</p>",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "Interger",
+            "optional": false,
+            "field": "course_evaluate_id",
+            "description": ""
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "user_id",
+            "description": ""
+          }
+        ]
+      }
+    },
+    "version": "0.0.0",
+    "filename": "backend/src/main/java/com/yoke/backend/Controller/Course/CourseMessage/CourseEvaluateController.java",
     "groupTitle": "CourseMessage"
   },
   {
