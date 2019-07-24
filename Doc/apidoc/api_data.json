@@ -1,7 +1,7 @@
 [
   {
     "type": "post",
-    "url": "/course/comments/add:",
+    "url": "/courses/comments/add:",
     "title": "",
     "name": "addComment",
     "description": "<p>添加评论</p>",
@@ -159,6 +159,26 @@
         "url": "example: /course/comments/praise?user_id=1&course_comment_id=2"
       }
     ],
+    "version": "0.0.0",
+    "filename": "backend/src/main/java/com/yoke/backend/Controller/Course/CourseMessage/CourseCommentController.java",
+    "groupTitle": "CourseComment"
+  },
+  {
+    "type": "post",
+    "url": "/courses/comments/reply:",
+    "title": "",
+    "description": "<p>回复</p>",
+    "name": "replyComment",
+    "group": "CourseComment",
+    "success": {
+      "examples": [
+        {
+          "title": "Post-Example:",
+          "content": "    {\n\t\"course_comment_id\":1,\n\t\"user_id\":84514,\n\t\"course_comment_reply_content\":\"说的很中肯\"\n}",
+          "type": "json"
+        }
+      ]
+    },
     "version": "0.0.0",
     "filename": "backend/src/main/java/com/yoke/backend/Controller/Course/CourseMessage/CourseCommentController.java",
     "groupTitle": "CourseComment"
@@ -352,6 +372,37 @@
     "version": "0.0.0",
     "filename": "backend/src/main/java/com/yoke/backend/Controller/Course/CourseMessage/CourseEvaluateController.java",
     "groupTitle": "CourseEvaluate"
+  },
+  {
+    "type": "get",
+    "url": "/courses/moments/find",
+    "title": "",
+    "group": "CourseMoment",
+    "description": "<p>精彩瞬间获取部分序列</p>",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "Integer",
+            "optional": false,
+            "field": "serialNumber1",
+            "description": ""
+          },
+          {
+            "group": "Parameter",
+            "type": "Integer",
+            "optional": false,
+            "field": "serialNumber2",
+            "description": ""
+          }
+        ]
+      }
+    },
+    "version": "0.0.0",
+    "filename": "backend/src/main/java/com/yoke/backend/Controller/Course/CourseMessage/CourseGreatMomentController.java",
+    "groupTitle": "CourseMoment",
+    "name": "GetCoursesMomentsFind"
   },
   {
     "name": "commentCourseMoment",
