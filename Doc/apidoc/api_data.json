@@ -1,7 +1,7 @@
 [
   {
     "type": "post",
-    "url": "/course/comments/add:",
+    "url": "/courses/comments/add:",
     "title": "",
     "name": "addComment",
     "description": "<p>添加评论</p>",
@@ -111,7 +111,7 @@
     "group": "CourseComment",
     "sampleRequest": [
       {
-        "url": "47.103.30.166:8000/courses/comments/find?course_id=41899"
+        "url": "47.103.30.166:8000/courses/comments/find"
       }
     ],
     "success": {
@@ -129,7 +129,7 @@
   },
   {
     "type": "get",
-    "url": "/course/comments/praise:",
+    "url": "/courses/comments/praise:",
     "title": "",
     "description": "<p>点赞评论</p>",
     "parameter": {
@@ -159,6 +159,26 @@
         "url": "example: /course/comments/praise?user_id=1&course_comment_id=2"
       }
     ],
+    "version": "0.0.0",
+    "filename": "backend/src/main/java/com/yoke/backend/Controller/Course/CourseMessage/CourseCommentController.java",
+    "groupTitle": "CourseComment"
+  },
+  {
+    "type": "post",
+    "url": "/courses/comments/reply:",
+    "title": "",
+    "description": "<p>回复</p>",
+    "name": "replyComment",
+    "group": "CourseComment",
+    "success": {
+      "examples": [
+        {
+          "title": "Post-Example:",
+          "content": "    {\n\t\"course_comment_id\":1,\n\t\"user_id\":84514,\n\t\"course_comment_reply_content\":\"说的很中肯\"\n}",
+          "type": "json"
+        }
+      ]
+    },
     "version": "0.0.0",
     "filename": "backend/src/main/java/com/yoke/backend/Controller/Course/CourseMessage/CourseCommentController.java",
     "groupTitle": "CourseComment"
@@ -230,7 +250,7 @@
   },
   {
     "type": "post",
-    "url": "/course/evaluates/add:",
+    "url": "/courses/evaluates/add:",
     "title": "",
     "name": "addEvaluation",
     "description": "<p>添加评测</p>",
@@ -244,7 +264,7 @@
       "examples": [
         {
           "title": "Request-Example:",
-          "content": "    {\n\t\"course_id\":\"SE101\",  //必填\n\t\"user_id\":\"01231\",   //必填\n\t\"evaluate_point\":5,\n\t\"给分情况\":\"给分高\"\n}",
+          "content": "    {\n\t\"course_id\":\"SE101\",  //必填\n\t\"user_id\":\"01231\",   //必填\n\t\"evaluate_point\":5,   //必填\n\t\"给分情况\":\"给分高\"\n}",
           "type": "json"
         }
       ]
@@ -255,7 +275,7 @@
   },
   {
     "type": "get",
-    "url": "/course/evaluates/find",
+    "url": "/courses/evaluates/find",
     "title": "",
     "name": "findEvaluation",
     "description": "<p>获取课程评测</p>",
@@ -352,6 +372,37 @@
     "version": "0.0.0",
     "filename": "backend/src/main/java/com/yoke/backend/Controller/Course/CourseMessage/CourseEvaluateController.java",
     "groupTitle": "CourseEvaluate"
+  },
+  {
+    "type": "get",
+    "url": "/courses/moments/find",
+    "title": "",
+    "group": "CourseMoment",
+    "description": "<p>精彩瞬间获取部分序列</p>",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "Integer",
+            "optional": false,
+            "field": "serialNumber1",
+            "description": ""
+          },
+          {
+            "group": "Parameter",
+            "type": "Integer",
+            "optional": false,
+            "field": "serialNumber2",
+            "description": ""
+          }
+        ]
+      }
+    },
+    "version": "0.0.0",
+    "filename": "backend/src/main/java/com/yoke/backend/Controller/Course/CourseMessage/CourseGreatMomentController.java",
+    "groupTitle": "CourseMoment",
+    "name": "GetCoursesMomentsFind"
   },
   {
     "name": "commentCourseMoment",
@@ -500,7 +551,7 @@
   },
   {
     "type": "post",
-    "url": "courses/moment/upload",
+    "url": "/courses/moments/upload",
     "title": "",
     "name": "uploadFile",
     "description": "<p>上传图片或者视频文件</p>",
@@ -996,6 +1047,30 @@
         ]
       }
     },
+    "filename": "backend/src/main/java/com/yoke/backend/Controller/UserController.java",
+    "groupTitle": "users"
+  },
+  {
+    "type": "post",
+    "url": "/courses/avatar/upload",
+    "title": "",
+    "name": "uploadFile",
+    "description": "<p>上传头像</p>",
+    "group": "users",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "file",
+            "optional": false,
+            "field": "file",
+            "description": ""
+          }
+        ]
+      }
+    },
+    "version": "0.0.0",
     "filename": "backend/src/main/java/com/yoke/backend/Controller/UserController.java",
     "groupTitle": "users"
   }
