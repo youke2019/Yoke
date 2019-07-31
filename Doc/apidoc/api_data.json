@@ -813,6 +813,68 @@
     "groupTitle": "CourseQuestion"
   },
   {
+    "type": "get",
+    "url": "courses/recommend/find",
+    "title": "",
+    "description": "<p>获得用户的推荐课程</p>",
+    "name": "CoursesRecommend",
+    "group": "CourseRecommend",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "user_id",
+            "description": ""
+          },
+          {
+            "group": "Parameter",
+            "type": "Integer",
+            "optional": false,
+            "field": "size",
+            "description": ""
+          }
+        ]
+      }
+    },
+    "header": {
+      "examples": [
+        {
+          "title": "Response-Example:",
+          "content": "[\n    {\n        \"course_id\": \"LA116\",\n        \"course_name\": \"刑法分论\",\n        \"course_hours\": 48,\n        \"course_credits\": 3.0,\n        \"general\": false,\n        \"general_type\": \"\",\n        \"course_deptname\": \"凯原法学院\"\n    }\n]",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "backend/src/main/java/com/yoke/backend/Controller/Course/CourseRecommendController.java",
+    "groupTitle": "CourseRecommend"
+  },
+  {
+    "type": "get",
+    "url": "/courses/recommend/data/generate",
+    "title": "",
+    "description": "<p>获得机器学习推荐课程所需要的DataModel，适用于开发时期由于数据量不足，生成模拟数据</p>",
+    "group": "CourseRecommend",
+    "name": "DataGeneration______________",
+    "version": "0.0.0",
+    "filename": "backend/src/main/java/com/yoke/backend/Controller/Course/CourseRecommendController.java",
+    "groupTitle": "CourseRecommend"
+  },
+  {
+    "type": "get",
+    "url": "courses/recommend/data/load",
+    "title": "",
+    "description": "<p>将评测中的数据导入DataModel</p>",
+    "name": "loadEvaluationData",
+    "group": "CourseRecommend",
+    "version": "0.0.0",
+    "filename": "backend/src/main/java/com/yoke/backend/Controller/Course/CourseRecommendController.java",
+    "groupTitle": "CourseRecommend"
+  },
+  {
     "type": "post",
     "url": "/courses/search",
     "title": "",
@@ -1052,7 +1114,7 @@
   },
   {
     "type": "post",
-    "url": "/courses/avatar/upload",
+    "url": "/users/avatar/upload",
     "title": "",
     "name": "uploadFile",
     "description": "<p>上传头像</p>",
