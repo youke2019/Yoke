@@ -1012,6 +1012,81 @@
     "groupTitle": "jaccount"
   },
   {
+    "type": "post",
+    "url": "/report/answer",
+    "title": "",
+    "description": "<p>举报课程评论</p>",
+    "name": "reportAnswer",
+    "group": "report",
+    "version": "1.0.0",
+    "sampleRequest": [
+      {
+        "url": "47.103.30.166:8000/report/answer"
+      }
+    ],
+    "success": {
+      "examples": [
+        {
+          "title": "Post-Example:",
+          "content": "    {\n\n    \"answer_comment_id\":9,\n    \"user_id\"：84514，\n    \"answer_comment_report_reason\":\"污蔑老师\"\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "filename": "backend/src/main/java/com/yoke/backend/Controller/ReportController.java",
+    "groupTitle": "report"
+  },
+  {
+    "type": "post",
+    "url": "/report/comment",
+    "title": "",
+    "description": "<p>举报课程评论</p>",
+    "name": "reportComment",
+    "group": "report",
+    "version": "1.0.0",
+    "sampleRequest": [
+      {
+        "url": "47.103.30.166:8000/report/comment"
+      }
+    ],
+    "success": {
+      "examples": [
+        {
+          "title": "Post-Example:",
+          "content": "    {\n\n    \"course_comment_id\":9,\n    \"user_id\"：84514，\n    \"course_comment_report_reason\":\"污蔑老师\"\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "filename": "backend/src/main/java/com/yoke/backend/Controller/ReportController.java",
+    "groupTitle": "report"
+  },
+  {
+    "type": "post",
+    "url": "/report/question",
+    "title": "",
+    "description": "<p>举报课程评论</p>",
+    "name": "reportQuestion",
+    "group": "report",
+    "version": "1.0.0",
+    "sampleRequest": [
+      {
+        "url": "47.103.30.166:8000/report/question"
+      }
+    ],
+    "success": {
+      "examples": [
+        {
+          "title": "Post-Example:",
+          "content": "    {\n\n    \"question_comment_id\":9,\n    \"user_id\"：84514，\n    \"question_comment_report_reason\":\"污蔑老师\"\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "filename": "backend/src/main/java/com/yoke/backend/Controller/ReportController.java",
+    "groupTitle": "report"
+  },
+  {
     "type": "get",
     "url": "/users/ban",
     "title": "",
