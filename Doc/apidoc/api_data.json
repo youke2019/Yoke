@@ -934,6 +934,37 @@
   },
   {
     "type": "get",
+    "url": "courses/hot",
+    "title": "",
+    "description": "<p>获取热门课程</p>",
+    "group": "courses",
+    "name": "hotCoursesInfo",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "user_id",
+            "description": ""
+          },
+          {
+            "group": "Parameter",
+            "type": "Integer",
+            "optional": false,
+            "field": "number",
+            "description": ""
+          }
+        ]
+      }
+    },
+    "version": "0.0.0",
+    "filename": "backend/src/main/java/com/yoke/backend/Controller/Course/CourseController.java",
+    "groupTitle": "courses"
+  },
+  {
+    "type": "get",
     "url": "/courses/update",
     "title": "",
     "description": "<p>拉取并更新教务处数据</p>",
@@ -1015,7 +1046,7 @@
     "type": "post",
     "url": "/report/answer",
     "title": "",
-    "description": "<p>举报课程评论</p>",
+    "description": "<p>举报课程回答</p>",
     "name": "reportAnswer",
     "group": "report",
     "version": "1.0.0",
@@ -1065,7 +1096,7 @@
     "type": "post",
     "url": "/report/question",
     "title": "",
-    "description": "<p>举报课程评论</p>",
+    "description": "<p>举报课程问题</p>",
     "name": "reportQuestion",
     "group": "report",
     "version": "1.0.0",
