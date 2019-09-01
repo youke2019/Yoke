@@ -1118,6 +1118,37 @@
     "groupTitle": "report"
   },
   {
+    "type": "post",
+    "url": "/users/feedback/add",
+    "title": "",
+    "name": "addFeedback",
+    "description": "<p>添加反馈</p>",
+    "group": "users",
+    "success": {
+      "examples": [
+        {
+          "title": "Request-Example:",
+          "content": "{\n    \"user_id\": \"ID001\",\n    \"content\": \"我不要你觉得，我要我觉得\"\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "backend/src/main/java/com/yoke/backend/Controller/UserController.java",
+    "groupTitle": "users"
+  },
+  {
+    "type": "get",
+    "url": "/users/feedback/all",
+    "title": "",
+    "name": "allFeedback",
+    "description": "<p>查看所有反馈</p>",
+    "group": "users",
+    "version": "0.0.0",
+    "filename": "backend/src/main/java/com/yoke/backend/Controller/UserController.java",
+    "groupTitle": "users"
+  },
+  {
     "type": "get",
     "url": "/users/ban",
     "title": "",
