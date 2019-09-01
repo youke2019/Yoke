@@ -875,6 +875,86 @@
     "groupTitle": "CourseRecommend"
   },
   {
+    "type": "get",
+    "url": "/manager/signin",
+    "title": "",
+    "name": "ManagerSignIn",
+    "group": "Manager",
+    "description": "<p>管理员登录功能，检查了账户是否存在与密码是否正确</p>",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "account",
+            "description": ""
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "password",
+            "description": ""
+          }
+        ]
+      }
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Response-Example:",
+          "content": "{\n \"error_msg\":\"password incorrect\",\n \"success\":false\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "backend/src/main/java/com/yoke/backend/Controller/Manager/AdminController.java",
+    "groupTitle": "Manager"
+  },
+  {
+    "type": "get",
+    "url": "/manager/signup",
+    "title": "",
+    "name": "ManagerSignUp",
+    "group": "Manager",
+    "description": "<p>管理员注册，检查了账户名是否已经存在</p>",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "account",
+            "description": ""
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "password",
+            "description": ""
+          }
+        ]
+      }
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Response-Example:",
+          "content": "{\n    \"error_msg\":\"account already exists\",\n    \"success\":false\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "backend/src/main/java/com/yoke/backend/Controller/Manager/AdminController.java",
+    "groupTitle": "Manager"
+  },
+  {
     "type": "post",
     "url": "/courses/search",
     "title": "",
