@@ -956,6 +956,74 @@ define({ "api": [
   },
   {
     "type": "post",
+    "url": "/manager/systemMessage/add",
+    "title": "",
+    "name": "addSystemMessage",
+    "group": "Manager",
+    "description": "<p>添加系统消息</p>",
+    "success": {
+      "examples": [
+        {
+          "title": "Request-Example:",
+          "content": "    {\n\t\"admin_id\":1,\n\t\"content\":\"全部做完，听我的\",\n\t\"image_url\":\"www.google.com\"\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "backend/src/main/java/com/yoke/backend/Controller/Manager/AdminController.java",
+    "groupTitle": "Manager"
+  },
+  {
+    "type": "get",
+    "url": "/manager/systemMessage/find",
+    "title": "",
+    "name": "findSystemMessage",
+    "group": "Manager",
+    "description": "<p>找出最近发布的n则系统消息</p>",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "Integer",
+            "optional": false,
+            "field": "number",
+            "description": ""
+          }
+        ]
+      }
+    },
+    "version": "0.0.0",
+    "filename": "backend/src/main/java/com/yoke/backend/Controller/Manager/AdminController.java",
+    "groupTitle": "Manager"
+  },
+  {
+    "type": "post",
+    "url": "/manager/systemMessage/upload",
+    "title": "",
+    "name": "uploadFile",
+    "description": "<p>上传图片或者视频文件</p>",
+    "group": "Manager",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "file",
+            "optional": false,
+            "field": "file",
+            "description": ""
+          }
+        ]
+      }
+    },
+    "version": "0.0.0",
+    "filename": "backend/src/main/java/com/yoke/backend/Controller/Manager/AdminController.java",
+    "groupTitle": "Manager"
+  },
+  {
+    "type": "post",
     "url": "/courses/search",
     "title": "",
     "description": "<p>根据条件搜索课程,通过post发送请求，请求参数通过json传输，json数据示例如下，所有的数据项均可为空， 即可以只有course_id的信息，所有的参数项中，course_id,course_name,teacher_name,building只能有一个，其他参数可以传递一个或者多个。</p>",
