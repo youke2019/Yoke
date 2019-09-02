@@ -1216,7 +1216,7 @@ define({ "api": [
   },
   {
     "type": "post",
-    "url": "/report/answer",
+    "url": "/report/report/answer",
     "title": "",
     "description": "<p>举报课程回答</p>",
     "name": "reportAnswer",
@@ -1224,14 +1224,14 @@ define({ "api": [
     "version": "1.0.0",
     "sampleRequest": [
       {
-        "url": "47.103.30.166:8000/report/answer"
+        "url": "47.103.30.166:8000/report/report/answer"
       }
     ],
     "success": {
       "examples": [
         {
           "title": "Post-Example:",
-          "content": "    {\n\n    \"answer_comment_id\":9,\n    \"user_id\"：84514，\n    \"answer_comment_report_reason\":\"污蔑老师\"\n}",
+          "content": "    {\n\n    \"answer_id\":9,\n    \"user_id\"：84514，\n    \"answer_report_reason\":\"污蔑老师\"\n}",
           "type": "json"
         }
       ]
@@ -1241,7 +1241,7 @@ define({ "api": [
   },
   {
     "type": "post",
-    "url": "/report/comment",
+    "url": "/report/report/comment",
     "title": "",
     "description": "<p>举报课程评论</p>",
     "name": "reportComment",
@@ -1249,7 +1249,7 @@ define({ "api": [
     "version": "1.0.0",
     "sampleRequest": [
       {
-        "url": "47.103.30.166:8000/report/comment"
+        "url": "47.103.30.166:8000/report/report/comment"
       }
     ],
     "success": {
@@ -1266,7 +1266,32 @@ define({ "api": [
   },
   {
     "type": "post",
-    "url": "/report/question",
+    "url": "/report/report/moment",
+    "title": "",
+    "description": "<p>举报课程精彩瞬间</p>",
+    "name": "reportMoment",
+    "group": "report",
+    "version": "1.0.0",
+    "sampleRequest": [
+      {
+        "url": "47.103.30.166:8000/report/report/moment"
+      }
+    ],
+    "success": {
+      "examples": [
+        {
+          "title": "Post-Example:",
+          "content": "    {\n\n    \"video_id\":9,\n    \"user_id\"：84514，\n    \"video_report_reason\":\"污蔑老师\"\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "filename": "backend/src/main/java/com/yoke/backend/Controller/ReportController.java",
+    "groupTitle": "report"
+  },
+  {
+    "type": "post",
+    "url": "/report/report/question",
     "title": "",
     "description": "<p>举报课程问题</p>",
     "name": "reportQuestion",
@@ -1274,14 +1299,14 @@ define({ "api": [
     "version": "1.0.0",
     "sampleRequest": [
       {
-        "url": "47.103.30.166:8000/report/question"
+        "url": "47.103.30.166:8000/report/report/question"
       }
     ],
     "success": {
       "examples": [
         {
           "title": "Post-Example:",
-          "content": "    {\n\n    \"question_comment_id\":9,\n    \"user_id\"：84514，\n    \"question_comment_report_reason\":\"污蔑老师\"\n}",
+          "content": "    {\n    \"question_id\":9,\n    \"user_id\":84514，\n    \"question_report_reason\":\"污蔑老师\"\n}",
           "type": "json"
         }
       ]
