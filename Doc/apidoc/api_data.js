@@ -976,6 +976,30 @@ define({ "api": [
   },
   {
     "type": "get",
+    "url": "/Manager/systemMessage/delete",
+    "title": "",
+    "name": "deleteSystemMessage",
+    "group": "Manager",
+    "description": "<p>删除系统消息</p>",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "Integer",
+            "optional": false,
+            "field": "message_id",
+            "description": ""
+          }
+        ]
+      }
+    },
+    "version": "0.0.0",
+    "filename": "backend/src/main/java/com/yoke/backend/Controller/Manager/AdminController.java",
+    "groupTitle": "Manager"
+  },
+  {
+    "type": "get",
     "url": "/manager/systemMessage/find",
     "title": "",
     "name": "findSystemMessage",
