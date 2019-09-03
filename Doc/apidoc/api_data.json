@@ -1,5 +1,29 @@
 [
   {
+    "type": "get",
+    "url": "/courses/answers/findById",
+    "title": "",
+    "name": "findAnswerById",
+    "group": "CourseAnswer",
+    "description": "<p>通过ID查找课程问题回答</p>",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "Integer",
+            "optional": false,
+            "field": "answer_id",
+            "description": ""
+          }
+        ]
+      }
+    },
+    "version": "0.0.0",
+    "filename": "backend/src/main/java/com/yoke/backend/Controller/Course/CourseMessage/CourseQuestionController.java",
+    "groupTitle": "CourseAnswer"
+  },
+  {
     "type": "post",
     "url": "/courses/comments/add:",
     "title": "",
@@ -78,6 +102,30 @@
         "url": "47.103.30.166:8000/courses/comments/delete?comment_id=3"
       }
     ],
+    "version": "0.0.0",
+    "filename": "backend/src/main/java/com/yoke/backend/Controller/Course/CourseMessage/CourseCommentController.java",
+    "groupTitle": "CourseComment"
+  },
+  {
+    "type": "get",
+    "url": "/courses/comments/findById",
+    "title": "",
+    "name": "findCommentById",
+    "group": "CourseComment",
+    "description": "<p>通过ID查找课程评论（无回复）</p>",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "Integer",
+            "optional": false,
+            "field": "comment_id",
+            "description": ""
+          }
+        ]
+      }
+    },
     "version": "0.0.0",
     "filename": "backend/src/main/java/com/yoke/backend/Controller/Course/CourseMessage/CourseCommentController.java",
     "groupTitle": "CourseComment"
@@ -448,6 +496,30 @@
   },
   {
     "type": "get",
+    "url": "/courses/moments/findById",
+    "title": "",
+    "name": "findMomentById",
+    "group": "CourseMoment",
+    "description": "<p>通过ID查找课程精彩瞬间（无回复）</p>",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "Integer",
+            "optional": false,
+            "field": "moment_id",
+            "description": ""
+          }
+        ]
+      }
+    },
+    "version": "0.0.0",
+    "filename": "backend/src/main/java/com/yoke/backend/Controller/Course/CourseMessage/CourseGreatMomentController.java",
+    "groupTitle": "CourseMoment"
+  },
+  {
+    "type": "get",
     "url": "images/",
     "title": "",
     "name": "getFile",
@@ -663,6 +735,30 @@
           "type": "json"
         }
       ]
+    },
+    "version": "0.0.0",
+    "filename": "backend/src/main/java/com/yoke/backend/Controller/Course/CourseMessage/CourseQuestionController.java",
+    "groupTitle": "CourseQuestion"
+  },
+  {
+    "type": "get",
+    "url": "/courses/questions/findById",
+    "title": "",
+    "name": "findQuestionById",
+    "group": "CourseQuestion",
+    "description": "<p>通过ID查找课程问题（无回答）</p>",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "Integer",
+            "optional": false,
+            "field": "question_id",
+            "description": ""
+          }
+        ]
+      }
     },
     "version": "0.0.0",
     "filename": "backend/src/main/java/com/yoke/backend/Controller/Course/CourseMessage/CourseQuestionController.java",
